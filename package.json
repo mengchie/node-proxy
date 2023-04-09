@@ -4,7 +4,8 @@
   "description": "A proxy server optimized for gaming traffic",
   "main": "index.js",
   "dependencies": {
-    "ip": "^2.0.0"
+    "ip": "^2.0.0",
+    "nodemon": "^2.0.22"
   },
   "scripts": {
     "start": "node index.js"
