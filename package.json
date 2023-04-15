@@ -2,13 +2,13 @@
   "name": "gaming-proxy-node-server",
   "version": "1.0.0",
   "description": "A proxy server optimized for gaming traffic",
-  "main": "index.js",
+  "main": "proxy.js",
   "dependencies": {
     "ip": "^2.0.0",
     "nodemon": "^2.0.22"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node proxy.js"
   },
   "author": "Your Name",
   "license": "MIT"
