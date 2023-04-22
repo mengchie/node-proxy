@@ -5,6 +5,7 @@ const ipAddr = require('ip').address(); // Get the IP address of the machine
 
 
 const udpServer = dgram.createSocket('udp4');
+const port = process.env.port || 8888;
 
 udpServer.on('message', (msg, rinfo) => {
   console.log(`Received request from ${rinfo.address}:${rinfo.port}: ${msg}`);
@@ -38,7 +39,7 @@ udpServer.on('listening', () => {
   console.log(`UDP forward proxy udpServer listening on ${address.address}:${address.port}`);
 });
 
-udpServer.bind(8888, ipAddr);
+udpServer.bind(port, ipAddr);
 
 const server = net.createServer();
 server.on('connection', (clientToProxySocket) => {
@@ -116,6 +117,6 @@ server.on('error', (err) => {
 server.on('close', () => {
   console.log('Client Disconnected');
 });
-server.listen(8888, ipAddr, () => {
-  console.log(`Server running at ${ipAddr}:8888/`);
+server.listen(port, ipAddr, () => {
+  console.log(`Server running at ${ipAddr}:${port}/`);
 });

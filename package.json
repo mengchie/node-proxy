@@ -2,7 +2,7 @@
   "name": "gaming-proxy-node-server",
   "version": "1.0.0",
   "description": "A proxy server optimized for gaming traffic",
-  "main": "proxy.js",
+  "main": "index.js",
   "dependencies": {
     "ip": "^2.0.0",
     "nodemon": "^2.0.22"
