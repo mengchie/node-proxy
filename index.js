@@ -1,8 +1,8 @@
 const net = require('net');
 const dgram = require('dgram');
 const dns = require('dns');
-const ipAddr = require('ip').address(); // Get the IP address of the machine
-
+// const ipAddr = require('ip').address(); // Get the IP address of the machine
+const ipAddr = '54.165.191.5';
 
 const udpServer = dgram.createSocket('udp4');
 const port = process.env.port || 8888;
