@@ -4,7 +4,7 @@ const dns = require('dns');
 const ipAddr = require('ip').address(); // Get the IP address of the machine
 
 const udpServer = dgram.createSocket('udp4');
-const port = process.env.port || 8888;
+const port = process.env.port || 8080;
 
 udpServer.on('message', (msg, rinfo) => {
   console.log(`Received request from ${rinfo.address}:${rinfo.port}: ${msg}`);
